@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+/* CUSTOM CSS */
+
+.navbar {
+  background-color: #d5dee6;
+  font-weight: bold;
+}
+
+.nav-item .nav-link {
+  min-width: 150px;
+  text-align: center;
+}
+
+.nav-item .nav-link:focus {
+  color: #1f3a68;
+}
