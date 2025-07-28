@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Projects from "./components/projects"
 
 function scrollToSection(id) {
   const el = document.getElementById(id);
@@ -130,51 +131,7 @@ function App() {
           </div>
         </section>
 
-        <section id="projects" className="container py-5">
-          <h2 className="text-center fw-bold mb-5">PROJECTS</h2>
-
-          <div className="row align-items-center bg-white border rounded shadow p-4 mx-1">
-            <div className="col-md-6 text-start">
-              <h4 className="text-primary fw-bold">
-                THESIS MANAGEMENT
-              </h4>
-
-              <p>
-                <span className="fw-bold text-success">Description: </span>
-                
-              </p>
-
-              <p>
-                <span className="fw-bold text-success">Role: </span>
-                Backend
-              </p>
-
-              <p>
-                <span className="fw-bold text-success">Technologies: </span>
-                Python (Django, RESTful APIs), React Native, React Native Paper,
-                Firebase.
-              </p>
-
-              <p>
-                <span className="fw-bold text-success">Features: </span>
-                Login, logout, forgot password, OAuth2 Authentication,...
-              </p>
-            </div>
-
-            <div
-              className="col-md-6 text-center rounded p-3"
-              style={{ backgroundColor: "#11163b" }}
-            >
-              <img
-                src="/project1.png"
-                alt="Project Screenshot"
-                className="img-fluid rounded"
-                style={{ maxHeight: "460px", objectFit: "contain" }}
-              />
-              <p className="text-success mt-3 fw-bold fs-5">Login</p>
-            </div>
-          </div>
-        </section>
+        <Projects/>
 
         <section id="contact" className="container py-5 bg-light">
           <h2>Contact</h2>
