@@ -130,7 +130,7 @@ const Projects = () => {
 
           <div className="col-md-6 text-center rounder position-relative p-3">
             <img
-              src={currentImage.src}
+              src={`${process.env.PUBLIC_URL}${currentImage.src}`}
               alt={currentImage.tag}
               className="img-fluid rounder"
               style={{ maxHeight: "350px", maxWidth: "500px" }}
