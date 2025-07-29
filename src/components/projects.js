@@ -36,11 +36,13 @@ const projectsData = [
       { src: "/images/kl_thongke.jpg", tag: "Statistics" },
       { src: "/images/kl_trochuyenthoigianthuc.jpg", tag: "Real-time Chat" },
     ],
+    role: "Backend Developer (Designed database schema and developed RESTful APIs).",
+    link: "https://github.com/nguyenhoaitam/thesis_management",
   },
   {
     title: "Wedding Restaurant Management System",
     description:
-    "This project involves the development of a software system that supports the management and organization of weddings and events at restaurants and conference centers. The system serves three main user roles: administrators, staff, and customers—each with specific functions tailored to their role. Administrators can manage banquet halls, menus, services, and view summary statistics. Customers can browse hall information, book events, make payments, and leave reviews after the event. Staff members can view assigned events and update service statuses. The system aims to streamline operations, minimize errors, and improve the overall customer service experience.",
+    "This project involves the development of a software system that supports the management and organization of weddings and events at restaurants and conference centers. The system serves three main user roles: administrators, staff, and customers each with specific functions tailored to their role. Administrators can manage banquet halls, menus, services, and view summary statistics. Customers can browse hall information, book events, make payments, and leave reviews after the event. Staff members can view assigned events and update service statuses. The system aims to streamline operations, minimize errors, and improve the overall customer service experience.",
      technologies: [
       "(Python) Django REST Framework",
       "ReactJS",
@@ -70,6 +72,8 @@ const projectsData = [
       { src: "/images/tc_thongke.jpg", tag: "Reporting and Statistics" },
       { src: "/images/tc_chat.jpg", tag: "Real-time Chat" },
     ],
+    role: "Fullstack Developer (Defined use cases, designed database schema, implemented RESTful APIs, created UI mockups, and developed the frontend interface).",
+    link: "https://github.com/nguyenhoaitam/WeddingRestaurantManagementBE",
   },
 ];
 
@@ -109,12 +113,17 @@ const Projects = () => {
       <section id="projects" className="container py-5">
         <h2 className="text-center mb-4">PROJECTS</h2>
 
-        <div className="row bg-light p-4 rounder shadow" style={{minHeight: "500px"}}>
+        <div className="row bg-light p-4 rounder shadow" style={{minHeight: "600px"}}>
           <div className="col-md-6">
             <h4 className="text-success fw-bold">{currentProject.title}</h4>
             <p>
               <strong>Description: </strong>
               {currentProject.description}
+            </p>
+
+            <p>
+              <strong>Role: </strong>
+              {currentProject.role}
             </p>
 
             <p>
@@ -126,13 +135,18 @@ const Projects = () => {
               <strong>Features: </strong>
               {currentProject.features.join(", ")}
             </p>
+            
+            <p>
+              <strong>Link: </strong>
+              <a href={currentProject.link} target="_blank">View on GitHub</a>
+            </p>
           </div>
 
           <div className="col-md-6 text-center rounder position-relative p-3">
             <img
               src={`${process.env.PUBLIC_URL}${currentImage.src}`}
               alt={currentImage.tag}
-              className="img-fluid rounder"
+              className="img-fluid rounder img-prj"
               style={{ maxHeight: "350px", maxWidth: "500px" }}
             />
             <h5 className="mt-3 fw-bold">{currentImage.tag}</h5>

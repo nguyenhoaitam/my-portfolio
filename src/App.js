@@ -61,7 +61,7 @@ function App() {
           <div className="row align-items-center">
             <div className="col-md-4 text-center mb-3 mb-md-0">
               <img
-                src="/anh.jpg"
+                src={`${process.env.PUBLIC_URL}/anh.jpg`}
                 alt="My avt"
                 className="img-fluid"
                 style={{ maxWidth: "200px" }}
@@ -137,7 +137,7 @@ function App() {
           <h2>Contact</h2>
           <p><strong>Phone:</strong> 0394873584</p>
           <p><strong>Email:</strong> nguyenhoaitam16082003@gmail.com</p>
-          <p><strong>Facebook:</strong> facebook.com/tamaa168/</p>
+          <p><strong>Facebook:</strong> <a href="https://facebook.com/tamaa168/" target="_blank">facebook.com/tamaa168/</a></p>
         </section>
       </div>
     </>

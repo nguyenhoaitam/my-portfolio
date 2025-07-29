@@ -39,6 +39,10 @@
 
 /* CUSTOM CSS */
 
+a {
+  text-decoration: none !important;
+}
+
 .navbar {
   background-color: #d5dee6;
   font-weight: bold;
@@ -74,4 +78,20 @@ div.navigate_prj {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  img.img-prj {
+    max-width: 400px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100% !important;
+  }
+
+  img.img-prj {
+    max-width: 300px !important;
+  }
 }
