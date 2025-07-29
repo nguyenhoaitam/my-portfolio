@@ -52,3 +52,26 @@
 .nav-item .nav-link:focus {
   color: #1f3a68;
 }
+
+button.btn-navigate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d5dee6;
+  border: 2px solid #cbd9e6;
+  color: #545454;
+  padding: 10px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+button.btn-navigate:hover {
+  background-color: #737373;
+  border-color: #706e6e;
+  cursor: pointer;
+}
+
+div.navigate_prj {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

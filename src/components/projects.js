@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "bootstrap";
 
+import { HiArrowCircleRight, HiArrowCircleLeft } from "react-icons/hi";
+
 const projectsData = [
   {
     title: "Thesis Management System",
@@ -11,28 +13,62 @@ const projectsData = [
       "(Python) Django REST Framework",
       "React Native",
       "MySQL",
-      "Firebase",
+      "Firebase.",
     ],
     features: [
       "Login",
       "OAuth2 Authentication",
-      "Thesis management",
-      "Council creation and management",
-      "Report submission",
-      "Feedback and grading",
+      "Thesis Management",
+      "Council Creation and Management",
+      "Submit Report",
+      "Feedback and Drading",
       "Statistics",
-      "Real-time chat",
+      "Real-time Chat.",
     ],
     images: [
-      { src: "./images/kl_chamdiem.jpg", tag: "CD" },
-      { src: "/images/kl_chitietkhoaluan.jpg", tag: "" },
-      { src: "/images/kl_dangnhap.jpg", tag: "" },
-      { src: "/images/kl_nopbaocao.jpg", tag: "" },
-      { src: "/images/kl_quanlykhoaluan.jpg", tag: "" },
-      { src: "/images/kl_quanlyhoidong.jpg", tag: "" },
-      { src: "/images/kl_suadiem.jpg", tag: "" },
-      { src: "/images/kl_thongke.jpg", tag: "" },
-      { src: "/images/kl_trochuyenthoigianthuc.jpg", tag: "" },
+      { src: "/images/kl_dangnhap.jpg", tag: "Login" },
+      { src: "/images/kl_quanlykhoaluan.jpg", tag: "Thesis Management" },
+      { src: "/images/kl_chitietkhoaluan.jpg", tag: "Thesis Details" },
+      { src: "/images/kl_quanlyhoidong.jpg", tag: "Council Management" },
+      { src: "/images/kl_nopbaocao.jpg", tag: "Submit Report" },
+      { src: "/images/kl_chamdiem.jpg", tag: "Grading" },
+      { src: "/images/kl_suadiem.jpg", tag: "Edit Grades" },
+      { src: "/images/kl_thongke.jpg", tag: "Statistics" },
+      { src: "/images/kl_trochuyenthoigianthuc.jpg", tag: "Real-time Chat" },
+    ],
+  },
+  {
+    title: "Wedding Restaurant Management System",
+    description:
+    "This project involves the development of a software system that supports the management and organization of weddings and events at restaurants and conference centers. The system serves three main user roles: administrators, staff, and customers—each with specific functions tailored to their role. Administrators can manage banquet halls, menus, services, and view summary statistics. Customers can browse hall information, book events, make payments, and leave reviews after the event. Staff members can view assigned events and update service statuses. The system aims to streamline operations, minimize errors, and improve the overall customer service experience.",
+     technologies: [
+      "(Python) Django REST Framework",
+      "ReactJS",
+      "MySQL",
+      "Firebase.",
+    ],
+    features: [
+      "Registration",
+      "Login",
+      "OAuth2 Authentication",
+      "Hall Browsing",
+      "Event Booking",
+      "Online Payment (Momo and ZaloPay)",
+      "Event Review",
+      "Reporting and Statistics",
+      "Real-time Chat.",
+    ],
+    images: [
+      { src: "/images/tc_dangky.jpg", tag: "Register" },
+      { src: "/images/tc_dangnhap.jpg", tag: "Login" },
+      { src: "/images/tc_tracuusanh.jpg", tag: "Hall Browsing" },
+      { src: "/images/tc_chitietsanh.jpg", tag: "Hall Detail" },
+      { src: "/images/tc_dattiec.jpg", tag: "Event Booking" },
+      { src: "/images/tc_thanhtoan.jpg", tag: "Payment" },
+      { src: "/images/tc_thanhtoanmomo.jpg", tag: "Payment (Momo)" },
+      { src: "/images/tc_danhgia.jpg", tag: "Event Review" },
+      { src: "/images/tc_thongke.jpg", tag: "Reporting and Statistics" },
+      { src: "/images/tc_chat.jpg", tag: "Real-time Chat" },
     ],
   },
 ];
@@ -73,41 +109,65 @@ const Projects = () => {
       <section id="projects" className="container py-5">
         <h2 className="text-center mb-4">PROJECTS</h2>
 
-        <div className="row bg-light p-4 rounder shadow">
+        <div className="row bg-light p-4 rounder shadow" style={{minHeight: "500px"}}>
+          <div className="col-md-6">
+            <h4 className="text-success fw-bold">{currentProject.title}</h4>
+            <p>
+              <strong>Description: </strong>
+              {currentProject.description}
+            </p>
 
-            <div className="col-md-6">
-                <h4 className="text-success fw-bold">{currentProject.title}</h4>
-                <p>
-                    <strong>Description: </strong>
-                    {currentProject.description}
-                </p>
+            <p>
+              <strong>Technologies: </strong>
+              {currentProject.technologies.join(", ")}
+            </p>
 
-                <p>
-                    <strong>Technologies: </strong>
-                    {currentProject.technologies.join(", ")}
-                </p>
+            <p>
+              <strong>Features: </strong>
+              {currentProject.features.join(", ")}
+            </p>
+          </div>
 
-                <p>
-                    <strong>Features: </strong>
-                    {currentProject.features.join(", ")}
-                </p>
-            </div>
+          <div className="col-md-6 text-center rounder position-relative p-3">
+            <img
+              src={currentImage.src}
+              alt={currentImage.tag}
+              className="img-fluid rounder"
+              style={{ maxHeight: "350px", maxWidth: "500px" }}
+            />
+            <h5 className="mt-3 fw-bold">{currentImage.tag}</h5>
 
-            <div className="col-md-6 text-center rounder position-relative p-3">
-                <img
-                    src={currentImage.src}
-                    alt={currentImage.tag}
-                    className="img-fluid rounder"
-                    style={{ maxHeight: "350px"}}
-                />
-                <h5 className="mt-3 fw-bold">{currentImage.tag}</h5>
-                
+            <button
+              className="btn btn-navigate position-absolute top-50 start-0 translate-middle-y"
+              onClick={prevImage}
+            >
+              <HiArrowCircleLeft />
+            </button>
 
-            </div>
-
+            <button
+              className="btn btn-navigate position-absolute top-50 end-0 translate-middle-y"
+              onClick={nextImage}
+            >
+              <HiArrowCircleRight />
+            </button>
+          </div>
         </div>
 
+        <div className="text-center mt-4 navigate_prj">
+          <button
+            className="btn btn-navigate mx-2"
+            onClick={prevProject}
+          >
+            <HiArrowCircleLeft />
+          </button>
 
+          <button
+            className="btn btn-navigate mx-2"
+            onClick={nextProject}
+          >
+            <HiArrowCircleRight />
+          </button>
+        </div>
       </section>
     </>
   );

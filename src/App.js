@@ -135,8 +135,9 @@ function App() {
 
         <section id="contact" className="container py-5 bg-light">
           <h2>Contact</h2>
-          <p>Email: tamnguyen@example.com</p>
-          <p>LinkedIn: linkedin.com/in/tamnguyen</p>
+          <p><strong>Phone:</strong> 0394873584</p>
+          <p><strong>Email:</strong> nguyenhoaitam16082003@gmail.com</p>
+          <p><strong>Facebook:</strong> facebook.com/tamaa168/</p>
         </section>
       </div>
     </>
