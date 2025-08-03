@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "projects": {
+    "title": "Title",
+    "description": "Description",
+    "role": "Role",
+    "technologies": "Technologies",
+    "features": "Features",
+    "link": "Link"
+  }
+}

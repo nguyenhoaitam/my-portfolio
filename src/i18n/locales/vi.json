@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "contact": "Liên hệ"
+  },
+  "projects": {
+    "title": "Tiêu đề",
+    "description": "Mô tả",
+    "role": "Vai trò",
+    "technologies": "Công nghệ sử dụng",
+    "features": "Chức năng",
+    "link": "Liên kết"
+  }
+}

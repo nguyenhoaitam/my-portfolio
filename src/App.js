@@ -51,6 +51,10 @@ function App() {
                 </button>
               </li>
             </ul>
+            <div className="language-switcher">
+              <button>VI</button>
+              <button>EN</button>
+            </div>
           </div>
         </div>
       </nav>
@@ -94,7 +98,7 @@ function App() {
         </section>
 
         <section id="skills" className="container py-5">
-          <h2 className="mb-4 text-center">Skills</h2>
+          <h2 className="mb-4 text-center">SKILLS</h2>
 
           <div className="row text-center">
             <div className="col-md-3 mb-4">
@@ -134,7 +138,7 @@ function App() {
         <Projects/>
 
         <section id="contact" className="container py-5 bg-light">
-          <h2>Contact</h2>
+          <h2 className="mb-4 text-center">CONTACT</h2>
           <p><strong>Phone:</strong> 0394873584</p>
           <p><strong>Email:</strong> nguyenhoaitam16082003@gmail.com</p>
           <p><strong>Facebook:</strong> <a href="https://facebook.com/tamaa168/" target="_blank">facebook.com/tamaa168/</a></p>
