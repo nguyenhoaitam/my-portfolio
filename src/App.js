@@ -1,7 +1,7 @@
 import "./App.css";
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Projects from "./components/projects"
+import Projects from "./components/projects";
+import { useTranslation } from "react-i18next";
 
 function scrollToSection(id) {
   const el = document.getElementById(id);
@@ -9,6 +9,7 @@ function scrollToSection(id) {
 }
 
 function App() {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
@@ -23,7 +24,7 @@ function App() {
                   className="btn btn-link nav-link"
                   onClick={() => scrollToSection("about")}
                 >
-                  ABOUT
+                  {t("navbar.about")}
                 </button>
               </li>
               <li className="nav-item">
@@ -31,7 +32,7 @@ function App() {
                   className="btn btn-link nav-link"
                   onClick={() => scrollToSection("skills")}
                 >
-                  SKILLS
+                  {t("navbar.skills")}
                 </button>
               </li>
               <li className="nav-item">
@@ -39,7 +40,7 @@ function App() {
                   className="btn btn-link nav-link"
                   onClick={() => scrollToSection("projects")}
                 >
-                  PROJECTS
+                  {t("navbar.projects")}
                 </button>
               </li>
               <li className="nav-item">
@@ -47,13 +48,31 @@ function App() {
                   className="btn btn-link nav-link"
                   onClick={() => scrollToSection("contact")}
                 >
-                  CONTACT
+                  {t("navbar.contact")}
                 </button>
               </li>
             </ul>
             <div className="language-switcher">
-              <button>VI</button>
-              <button>EN</button>
+              <button
+                onClick={() => i18n.changeLanguage("en")}
+                className={
+                  i18n.language === "en"
+                    ? "btn btn-lang"
+                    : "btn"
+                }
+              >
+                EN
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage("vi")}
+                className={
+                  i18n.language === "vi"
+                    ? "btn btn-lang"
+                    : "btn"
+                }
+              >
+                VI
+              </button>
             </div>
           </div>
         </div>
@@ -61,7 +80,7 @@ function App() {
 
       <div className="pt-5 mt-5">
         <section id="about" className="container py-5">
-          <h3 className="mb-4 text-center">ABOUT ME</h3>
+          <h3 className="mb-4 text-center">{t("navbar.about")}</h3>
           <div className="row align-items-center">
             <div className="col-md-4 text-center mb-3 mb-md-0">
               <img
@@ -73,32 +92,15 @@ function App() {
             </div>
 
             <div className="col-md-8">
-              <p>
-                Hello, I'm <strong>Nguyen Hoai Tam</strong>, a graduate in
-                Information Technology from{" "}
-                <strong>Ho Chi Minh City Open University</strong>. Throughout my
-                studies, I participated in various personal and team projects,
-                which helped me build a solid foundation in software development
-                processes.
-              </p>
-              <p>
-                I am eager to learn, always open to new challenges, and
-                committed to continuous self-improvement. I am currently seeking
-                an opportunity for employment or internship in a professional
-                environment where I can apply my knowledge, enhance my skills,
-                and contribute to the success of the development team.
-              </p>
-              <p>
-                I believe that with my passion for technology, sense of
-                responsibility, and strong teamwork skills, I can be a valuable
-                candidate and grow sustainably in this field.
-              </p>
+              <p>{t('about.content1')}</p>
+              <p>{t('about.content2')}</p>
+              <p>{t('about.content3')}</p>
             </div>
           </div>
         </section>
 
         <section id="skills" className="container py-5">
-          <h2 className="mb-4 text-center">SKILLS</h2>
+          <h2 className="mb-4 text-center">{t("navbar.skills")}</h2>
 
           <div className="row text-center">
             <div className="col-md-3 mb-4">
@@ -135,13 +137,22 @@ function App() {
           </div>
         </section>
 
-        <Projects/>
+        <Projects />
 
         <section id="contact" className="container py-5 bg-light">
-          <h2 className="mb-4 text-center">CONTACT</h2>
-          <p><strong>Phone:</strong> 0394873584</p>
-          <p><strong>Email:</strong> nguyenhoaitam16082003@gmail.com</p>
-          <p><strong>Facebook:</strong> <a href="https://facebook.com/tamaa168/" target="_blank">facebook.com/tamaa168/</a></p>
+          <h2 className="mb-4 text-center">{t("navbar.contact")}</h2>
+          <p>
+            <strong>{t("contact.phone")}:</strong> 0394873584
+          </p>
+          <p>
+            <strong>Email:</strong> nguyenhoaitam16082003@gmail.com
+          </p>
+          <p>
+            <strong>Facebook:</strong>{" "}
+            <a href="https://facebook.com/tamaa168/" target="_blank">
+              facebook.com/tamaa168/
+            </a>
+          </p>
         </section>
       </div>
     </>

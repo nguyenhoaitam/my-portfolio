@@ -1,16 +1,60 @@
 {
   "navbar": {
-    "about": "Giới thiệu",
-    "skills": "Kỹ năng",
-    "projects": "Dự án",
-    "contact": "Liên hệ"
+    "about": "GIỚI THIỆU",
+    "skills": "KỸ NĂNG",
+    "projects": "DỰ ÁN",
+    "contact": "LIÊN HỆ"
+  },
+  "about": {
+    "content1": "Xin chào, tôi là Nguyễn Hoài Tâm, tốt nghiệp ngành Công nghệ Thông Trường Đại học Mở TP.Hồ Chí Minh. Trong suốt quá trình học tập, tôi đã tham gia nhiều dự án cá nhân và dự án nhóm, qua đó xây dựng nền tảng vững chắc về quy trình phát triển phần mềm.",
+    "content2": "Tôi là người ham học hỏi, luôn sẵn sàng đón nhận thử thách mới và không ngừng hoàn thiện bản thân. Hiện tại, tôi đang tìm kiếm cơ hội làm việc hoặc thực tập trong một môi trường chuyên nghiệp để áp dụng kiến thức, nâng cao kỹ năng và đóng góp vào sự thành công của đội ngũ phát triển.",
+    "content3": "Với đam mê công nghệ, tinh thần trách nhiệm và khả năng làm việc nhóm tốt, tôi có thể trở thành một ứng viên tiềm năng và phát triển bền vững trong lĩnh vực này."
+  },
+  "contact": {
+    "phone": "Số điện thoại"
   },
   "projects": {
-    "title": "Tiêu đề",
     "description": "Mô tả",
     "role": "Vai trò",
     "technologies": "Công nghệ sử dụng",
     "features": "Chức năng",
-    "link": "Liên kết"
+    "link": "Liên kết",
+    "thesis": {
+      "title": "Hệ thống quản lý khóa luận tốt nghiệp",
+      "description": "Phát triển hệ thống quản lý toàn bộ quy trình thực hiện khóa luận tốt nghiệp trong môi trường đại học. Hệ thống hỗ trợ bốn vai trò người dùng: quản trị viên, cán bộ học vụ, giảng viên và sinh viên. Cán bộ học vụ có thể tạo, quản lý đề tài, theo dõi tiến độ và xuất báo cáo. Giảng viên có thể theo dõi các đề tài hướng dẫn hoặc phản biện, đưa ra nhận xét và chấm điểm. Sinh viên có thể nộp báo cáo theo giai đoạn, theo dõi tiến độ và xem đánh giá. Hệ thống được xây dựng nhằm số hóa quy trình, giảm tải thủ công và tăng tính minh bạch.",
+      "role": "Lập trình viên Backend (Thiết kế cơ sở dữ liệu và phát triển RESTful API).",
+      "technologies": "(Python) Django REST Framework, React Native, MySQL, Firebase.",
+      "features": "Đăng nhập, Xác thực OAuth2, Quản lý đề tài khóa luận, Tạo và quản lý hội đồng, Nộp báo cáo, Nhận xét và chấm điểm, Thống kê, Trò chuyện thời gian thực.",
+      "images": {
+        "Login": "Đăng nhập",
+        "Thesis Management": "Quản lý khóa luận",
+        "Thesis Details": "Chi tiết khóa luận",
+        "Council Management": "Quản lý hội đồng",
+        "Submit Report": "Nộp báo cáo",
+        "Grading": "Chấm điểm",
+        "Edit Grades": "Sửa điểm",
+        "Statistics": "Thống kê",
+        "Real-time Chat": "Trò chuyện thời gian thực"
+      }
+    },
+    "wedding": {
+      "title": "Hệ thống quản lý nhà hàng tiệc cưới",
+      "description": "Phát triển hệ thống phần mềm hỗ trợ quản lý và tổ chức tiệc cưới, sự kiện tại nhà hàng và trung tâm hội nghị. Hệ thống phục vụ ba nhóm người dùng chính: quản trị viên, nhân viên và khách hàng, với các chức năng riêng biệt. Quản trị viên có thể quản lý sảnh tiệc, thực đơn, dịch vụ và xem thống kê tổng quan. Khách hàng có thể xem thông tin sảnh, đặt tiệc, thanh toán và để lại đánh giá sau sự kiện. Nhân viên có thể xem các sự kiện được phân công và cập nhật trạng thái dịch vụ. Hệ thống giúp tối ưu hóa quy trình vận hành, giảm thiểu sai sót và nâng cao chất lượng dịch vụ khách hàng.",
+      "role": "Lập trình viên Fullstack (Thiết kế use case, thiết kế cơ sở dữ liệu, xây dựng RESTful API, thiết kế giao diện mẫu và phát triển giao diện người dùng).",
+      "technologies": "(Python) Django REST Framework, React Native, MySQL, Firebase.",
+      "features": "Đăng nhập, Xác thực OAuth2, Quản lý sảnh, Đặt tiệc, Thanh toán trực tuyến (Momo, ZaloPay), Đánh giá sự kiện, Báo cáo & thống kê, Trò chuyện thời gian thực.",
+      "images": {
+        "Register": "Đăng ký",
+        "Login": "Đăng nhập",
+        "Hall Browsing": "Tra cứu sảnh",
+        "Hall Detail": "Chi tiết sảnh",
+        "Event Booking": "Đặt tiệc",
+        "Payment": "Thanh toán",
+        "Payment (Momo)": "Thanh toán (Momo)",
+        "Event Review": "Đánh giá sự kiện",
+        "Reporting and Statistics": "Báo cáo & thống kê",
+        "Real-time Chat": "Trò chuyện thời gian thực"
+      }
+    }
   }
 }

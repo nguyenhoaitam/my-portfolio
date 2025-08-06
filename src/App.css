@@ -80,6 +80,25 @@ div.navigate_prj {
   justify-content: center;
 }
 
+.language-switcher button {
+  border: none;
+  padding: 5px 10px;
+  margin: 3px;
+}
+
+.language-switcher {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.language-switcher button:hover {
+  background-color: rgb(140, 184, 197);
+}
+
+.language-switcher .btn-lang {
+  background-color: rgb(140, 184, 197);
+}
+
 @media (max-width: 1200px) {
   img.img-prj {
     max-width: 400px !important;
